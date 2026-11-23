@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -734,8 +733,8 @@
                                 </div>
                                 <div class="min-w-0">
                                     <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Executive Email</p>
-                                    <a href="mailto:achichinazo@gmail.com" class="text-sm sm:text-base font-bold text-white hover:text-teal-400 transition-colors truncate block">
-                                        achichinazo@gmail.com
+                                    <a href="mailto:director@achivhealthclinicals.com" class="text-sm sm:text-base font-bold text-white hover:text-teal-400 transition-colors truncate block">
+                                        director@achivhealthclinicals.com
                                     </a>
                                 </div>
                             </div>
@@ -938,7 +937,7 @@
             // 3. One-Click Email Copy (iframe-safe execCommand approach)
             const copyEmailBtn = document.getElementById('copy-email-btn');
             copyEmailBtn.addEventListener('click', () => {
-                const emailAddress = 'achichinazo@gmail.com';
+                const emailAddress = 'director@achivhealthclinicals.com';
                 const helperArea = document.createElement('textarea');
                 helperArea.value = emailAddress;
                 helperArea.setAttribute('readonly', '');
@@ -1006,9 +1005,9 @@
                     `Best regards,\n${data.contactName}`
                 );
 
-                formStatus.textContent = 'Opening your default email client with your pre-filled partnership brief addressed to achichinazo@gmail.com.';
+                formStatus.textContent = 'Opening your default email client with your pre-filled partnership brief addressed to director@achivhealthclinicals.com.';
                 formStatus.classList.remove('hidden');
-                window.location.href = `mailto:achichinazo@gmail.com?subject=${subject}&body=${body}`;
+                window.location.href = `mailto:director@achivhealthclinicals.com?subject=${subject}&body=${body}`;
             });
 
             dispatchWhatsAppBtn.addEventListener('click', () => {
