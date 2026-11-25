@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AchivHealth Clinicals | Real-Time Clinical Intelligence, Pharmacovigilance, and Medical Writing</title>
+    <title>AchivHealth Clinicals | Real-Time Clinical Intelligence, Pharmacovigilance &amp; Medical Writing</title>
     <meta name="description" content="AchivHealth Clinicals is an independent clinical research, Real-World Evidence (RWE), pharmacovigilance, clinical data management, and regulatory medical writing partner in Nigeria serving global CROs and pharmaceutical sponsors.">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
 
     <!-- Google Fonts: Plus Jakarta Sans & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom Tailwind Theme Configuration -->
+    <!-- Custom Tailwind Theme Matched to AchivHealth Gold, Emerald-Teal & Midnight Navy Logo -->
     <script>
         tailwind.config = {
             theme: {
@@ -25,18 +26,28 @@
                     },
                     colors: {
                         navy: {
-                            950: '#071426',
-                            900: '#0B1F3A',
-                            800: '#132C4E',
-                            700: '#1D3E6B',
+                            950: '#050D19',
+                            900: '#091628',
+                            800: '#10233D',
+                            700: '#1A3457',
                         },
-                        teal: {
-                            50: '#F0FDFA',
-                            100: '#CCFBF1',
-                            400: '#2DD4BF',
-                            500: '#14B8A6',
-                            600: '#0D9488',
-                            700: '#0F766E',
+                        emeraldteal: {
+                            50: '#ECFBF8',
+                            100: '#D0F5EE',
+                            300: '#5EEAD4',
+                            400: '#2CC2B4',
+                            500: '#1A968C',
+                            600: '#137770',
+                            700: '#0E5D58',
+                        },
+                        gold: {
+                            50: '#FCF9F0',
+                            100: '#F7EED7',
+                            200: '#EEDAA8',
+                            300: '#E3C37A',
+                            400: '#D4AC54',
+                            500: '#B88E36',
+                            600: '#946F24',
                         }
                     }
                 }
@@ -45,71 +56,87 @@
     </script>
 
     <style>
-        /* Subtle dot-grid texture for dark executive sections */
+        /* Subtle executive grid for dark surfaces */
         .bg-clinical-grid {
-            background-image: radial-gradient(rgba(20, 184, 166, 0.14) 1px, transparent 1px);
-            background-size: 28px 28px;
+            background-image:
+                radial-gradient(rgba(212, 172, 84, 0.14) 1px, transparent 1px),
+                radial-gradient(rgba(44, 194, 180, 0.10) 1px, transparent 1px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
         }
 
-        /* Clean entrance transition */
-        @keyframes fadeSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Metallic champagne gold gradient text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F5E3B3 0%, #D4AC54 48%, #B88E36 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .animate-reveal {
-            animation: fadeSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        /* Emerald-teal & gold hairline sheen */
+        .border-luxe {
+            border: 1px solid rgba(212, 172, 84, 0.28);
+        }
+
+        /* Scroll reveal transitions */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden">
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-emeraldteal-600 selection:text-white overflow-x-hidden">
 
     <!-- =====================================================================
-         1. STICKY CORPORATE NAVIGATION BAR
+         1. STICKY EXECUTIVE NAVIGATION BAR (MIDNIGHT NAVY + GOLD ACCENTS)
     ====================================================================== -->
-    <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-shadow duration-300">
+    <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-navy-950/92 backdrop-blur-md border-b border-gold-400/20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Brand Mark -->
-                <a href="#top" class="flex items-center gap-3 group focus:outline-none">
-                    <div class="w-11 h-11 rounded-xl bg-navy-900 flex items-center justify-center shadow-md shadow-navy-900/15 group-hover:bg-navy-800 transition-colors">
-                        <svg class="w-6 h-6 text-teal-400" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <circle cx="6" cy="14" r="2.2" fill="currentColor"/>
-                            <circle cx="22" cy="14" r="2.2" fill="currentColor"/>
-                            <circle cx="14" cy="6" r="1.8" fill="currentColor" opacity="0.7"/>
-                            <circle cx="14" cy="22" r="1.8" fill="currentColor" opacity="0.7"/>
-                            <path d="M8.2 14H10.6L12.3 9.5L15.7 18.5L17.4 14H19.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <!-- Brand Mark using Uploaded Logo -->
+                <a href="#top" class="flex items-center gap-3.5 group focus:outline-none">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 border border-gold-400/40 overflow-hidden shadow-lg shadow-black/30 group-hover:border-gold-300 transition-colors shrink-0 relative">
+                        <img
+                            src="logo.jpg"
+                            alt="AchivHealth Clinicals Monogram"
+                            class="w-full h-full object-cover object-[50%_38%] scale-[2.15]"
+                            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                        >
+                        <!-- Clean monogram fallback if logo.jpg has not been uploaded yet -->
+                        <div class="hidden w-full h-full flex items-center justify-center font-display font-extrabold text-sm text-gold-300 tracking-tight">
+                            AH
+                        </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="font-display text-lg sm:text-xl font-extrabold text-navy-900 tracking-tight leading-none">AchivHealth</span>
-                        <span class="text-[11px] font-bold text-teal-600 uppercase tracking-[0.2em] mt-1 leading-none">Clinicals</span>
+                        <span class="font-display text-lg sm:text-xl font-extrabold text-white tracking-tight leading-none group-hover:text-gold-100 transition-colors">AchivHealth</span>
+                        <span class="text-[11px] font-bold text-gold-400 uppercase tracking-[0.24em] mt-1 leading-none">Clinicals</span>
                     </div>
                 </a>
 
-                <!-- Desktop Links -->
-                <nav class="hidden lg:flex items-center gap-8" aria-label="Primary Navigation">
-                    <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-teal-600 transition-colors">Services</a>
-                    <a href="#nigeria-advantage" class="text-sm font-semibold text-slate-600 hover:text-teal-600 transition-colors">Nigeria Advantage</a>
-                    <a href="#research" class="text-sm font-semibold text-slate-600 hover:text-teal-600 transition-colors">Research</a>
-                    <a href="#credentials" class="text-sm font-semibold text-slate-600 hover:text-teal-600 transition-colors">Credentials</a>
-                    <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-teal-600 transition-colors">Contact</a>
-                    <a href="#contact" class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm shadow-teal-600/25 transition-all">
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-7" aria-label="Primary Navigation">
+                    <a href="#commercial-value" class="text-sm font-semibold text-gold-200 hover:text-gold-400 transition-colors">Partner ROI</a>
+                    <a href="#services" class="text-sm font-semibold text-slate-300 hover:text-emeraldteal-300 transition-colors">Services</a>
+                    <a href="#nigeria-advantage" class="text-sm font-semibold text-slate-300 hover:text-emeraldteal-300 transition-colors">Nigeria Advantage</a>
+                    <a href="#research" class="text-sm font-semibold text-slate-300 hover:text-emeraldteal-300 transition-colors">Research</a>
+                    <a href="#credentials" class="text-sm font-semibold text-slate-300 hover:text-emeraldteal-300 transition-colors">Credentials</a>
+                    <a href="#contact" class="text-sm font-semibold text-slate-300 hover:text-emeraldteal-300 transition-colors">Contact</a>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 text-sm font-bold px-5 py-2.5 rounded-xl shadow-md shadow-gold-500/20 transition-all">
                         <span>Partner With Us</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                 </nav>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" class="lg:hidden p-2.5 rounded-xl text-slate-200 hover:bg-navy-800 border border-slate-800 focus:outline-none focus:ring-2 focus:ring-gold-400">
                     <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -121,18 +148,19 @@
         </div>
 
         <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 shadow-xl">
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-t border-gold-400/20 shadow-2xl">
             <div class="px-4 py-5 space-y-1.5">
-                <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">Services</a>
-                <a href="#nigeria-advantage" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">Nigeria Advantage</a>
-                <a href="#research" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">Research</a>
-                <a href="#credentials" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">Credentials</a>
-                <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">Contact</a>
+                <a href="#commercial-value" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-gold-300 hover:bg-navy-800 transition-colors">Partner ROI &amp; Financial Gain</a>
+                <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-navy-800 hover:text-emeraldteal-300 transition-colors">Services</a>
+                <a href="#nigeria-advantage" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-navy-800 hover:text-emeraldteal-300 transition-colors">Nigeria Advantage</a>
+                <a href="#research" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-navy-800 hover:text-emeraldteal-300 transition-colors">Research</a>
+                <a href="#credentials" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-navy-800 hover:text-emeraldteal-300 transition-colors">Credentials</a>
+                <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-navy-800 hover:text-emeraldteal-300 transition-colors">Contact</a>
                 <div class="pt-3">
-                    <a href="#contact" class="mobile-nav-link flex items-center justify-center gap-2 w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-3.5 rounded-xl shadow-md transition-colors">
-                        <span>Partner With Us</span>
+                    <a href="#contact" class="mobile-nav-link flex items-center justify-center gap-2 w-full bg-gradient-to-r from-gold-400 to-gold-500 text-navy-950 font-bold px-5 py-3.5 rounded-xl shadow-md transition-colors">
+                        <span>Request a Proposal</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                 </div>
@@ -141,58 +169,123 @@
     </header>
 
     <!-- =====================================================================
-         2. EXECUTIVE HERO SECTION
+         2. EXECUTIVE SPLIT-SCREEN HERO SECTION
     ====================================================================== -->
-    <section id="top" class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 bg-navy-900 text-white overflow-hidden">
-        <!-- Subtle Clinical Grid & Ambient Glows -->
-        <div class="absolute inset-0 bg-clinical-grid opacity-75 pointer-events-none"></div>
-        <div class="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-teal-600/20 blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[360px] h-[360px] rounded-full bg-teal-400/10 blur-[100px] pointer-events-none"></div>
+    <section id="top" class="relative pt-32 pb-20 lg:pt-40 lg:pb-24 bg-navy-950 text-white overflow-hidden">
+        <!-- Ambient Textures & Emerald/Gold Lighting -->
+        <div class="absolute inset-0 bg-clinical-grid opacity-80 pointer-events-none"></div>
+        <div class="absolute -top-28 -right-20 w-[560px] h-[560px] rounded-full bg-emeraldteal-500/18 blur-[130px] pointer-events-none"></div>
+        <div class="absolute top-1/3 -left-24 w-[420px] h-[420px] rounded-full bg-gold-400/12 blur-[120px] pointer-events-none"></div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl animate-reveal">
-                <!-- Executive Badge -->
-                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-navy-800/90 border border-teal-500/35 backdrop-blur-sm mb-7">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-400"></span>
-                    </span>
-                    <span class="text-xs font-bold tracking-[0.14em] text-teal-300 uppercase">
-                        West Africa Remote Clinical Operations &amp; RWE Partner
-                    </span>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center mb-16">
+
+                <!-- Left Column: Executive Pitch -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-navy-900/90 border border-gold-400/35 backdrop-blur-sm mb-7 shadow-sm">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emeraldteal-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emeraldteal-400"></span>
+                        </span>
+                        <span class="text-xs font-bold tracking-[0.15em] text-gold-200 uppercase">
+                            West Africa Remote Clinical Operations &amp; RWE Partner
+                        </span>
+                    </div>
+
+                    <h1 class="font-display text-3xl sm:text-5xl lg:text-[3.35rem] font-extrabold tracking-tight leading-[1.12] text-white mb-6">
+                        Real-Time Clinical Intelligence, Pharmacovigilance &amp; Medical Writing from
+                        <span class="text-gold-gradient">West Africa's Largest Market</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mb-9">
+                        AchivHealth Clinicals gives global pharmaceutical sponsors and Contract Research Organizations (CROs) direct, cost-efficient access to structured end-user Real-World Evidence, rigorous Source Document Verification (SDV), localized ADR reporting, and ICH-GCP compliant medical writing from Nigeria—without the overhead of establishing a local subsidiary.
+                    </p>
+
+                    <!-- Dual Executive CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emeraldteal-500 to-emeraldteal-600 hover:from-emeraldteal-400 hover:to-emeraldteal-500 text-white font-bold px-7 py-4 rounded-xl shadow-lg shadow-emeraldteal-600/25 transition-all text-base">
+                            <span>Request a Proposal</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#commercial-value" class="inline-flex items-center justify-center gap-2.5 bg-gold-400/10 hover:bg-gold-400/20 text-gold-200 border border-gold-400/45 font-semibold px-7 py-4 rounded-xl backdrop-blur-sm transition-all text-base">
+                            <span>See Partner Financial Gains</span>
+                            <svg class="w-4 h-4 text-gold-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Hero Headline -->
-                <h1 class="font-display text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.13] text-white mb-6">
-                    Real-Time Clinical Intelligence, Pharmacovigilance, and Medical Writing from <span class="text-teal-400">West Africa's Largest Market</span>
-                </h1>
+                <!-- Right Column: Signature Brand Crest & Executive ROI Snapshot -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-gradient-to-b from-navy-900/95 to-navy-950 border-luxe p-6 sm:p-8 shadow-2xl shadow-black/50 backdrop-blur-md">
+                        <div class="absolute -top-3 right-6 px-3.5 py-1 rounded-full bg-navy-950 border border-emeraldteal-400/45 text-emeraldteal-300 text-[11px] font-bold uppercase tracking-widest shadow">
+                            Audit-Ready Partner
+                        </div>
 
-                <!-- Hero Subheadline -->
-                <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl mb-10">
-                    AchivHealth Clinicals connects global pharmaceutical companies and Contract Research Organizations (CROs) with structured real-time end-user data, rigorous Source Document Verification (SDV), localized ADR reporting, and ICH-GCP compliant medical writing directly from Nigeria.
-                </p>
+                        <!-- Full Logo Crest Display -->
+                        <div class="w-full h-44 sm:h-48 rounded-2xl bg-[#0A182B] border border-gold-400/20 overflow-hidden mb-6 flex items-center justify-center relative">
+                            <img
+                                src="logo.jpg"
+                                alt="AchivHealth Clinicals Official Emblem"
+                                class="w-full h-full object-cover object-center scale-[1.18]"
+                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                            >
+                            <div class="hidden text-center px-4">
+                                <p class="font-display text-3xl font-extrabold text-gold-gradient tracking-tight">ACHIVHEALTH</p>
+                                <p class="text-xs font-bold tracking-[0.3em] text-emeraldteal-300 uppercase mt-1">CLINICALS</p>
+                            </div>
+                        </div>
 
-                <!-- Hero CTAs -->
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
-                    <a href="#contact" class="inline-flex items-center justify-center gap-2.5 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-7 py-4 rounded-xl shadow-lg shadow-teal-600/25 transition-all text-base">
-                        <span>Request a Proposal</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/2348102580630" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/15 text-white border border-slate-500/70 font-semibold px-7 py-4 rounded-xl backdrop-blur-sm transition-all text-base">
-                        <svg class="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12.031 2C6.504 2 2.01 6.494 2.01 12.021c0 1.766.462 3.491 1.341 5.012L2 22l5.106-1.339a9.975 9.975 0 004.925 1.298h.004c5.526 0 10.02-4.494 10.02-10.021C22.055 6.494 17.561 2 12.031 2zm5.839 14.23c-.246.693-1.434 1.325-1.981 1.406-.508.075-1.168.106-1.884-.122-.437-.139-.997-.324-1.718-.635-3.021-1.304-4.994-4.354-5.145-4.555-.151-.201-1.227-1.633-1.227-3.115s.776-2.211 1.051-2.512c.276-.301.602-.377.803-.377.201 0 .401.002.577.011.186.009.435-.071.681.521.246.594.841 2.055.916 2.206.075.151.125.327.025.528-.1.201-.151.327-.301.502-.151.176-.317.392-.452.527-.151.151-.308.314-.132.616.176.301.781 1.289 1.678 2.088 1.153 1.028 2.125 1.346 2.426 1.497.301.151.477.126.652-.075.176-.201.753-.879.954-1.181.201-.301.401-.251.677-.151.276.101 1.756.828 2.057.979.301.151.502.226.577.352.075.125.075.728-.171 1.421z"/>
-                        </svg>
-                        <span>Direct WhatsApp</span>
-                    </a>
+                        <!-- 3 High-Value Commercial Signals -->
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-800/70 border border-slate-700/60">
+                                <div class="w-9 h-9 rounded-lg bg-gold-400/15 text-gold-300 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">Zero Local Subsidiary CapEx</p>
+                                    <p class="text-xs text-slate-400 mt-0.5">Immediate Nigerian clinical &amp; PV presence without fixed entity setup costs.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-800/70 border border-slate-700/60">
+                                <div class="w-9 h-9 rounded-lg bg-emeraldteal-500/15 text-emeraldteal-300 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">Regulatory &amp; Revenue Protection</p>
+                                    <p class="text-xs text-slate-400 mt-0.5">NAFDAC, PCN &amp; ICH-GCP v6 rigor to prevent compliance delays.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-800/70 border border-slate-700/60">
+                                <div class="w-9 h-9 rounded-lg bg-gold-400/15 text-gold-300 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">Real-Time Post-Launch Market Defense</p>
+                                    <p class="text-xs text-slate-400 mt-0.5">Live end-user RWE across a 220M+ population to sharpen positioning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
             <!-- Trust Metrics Strip -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-8 border-t border-slate-800">
-                <div class="flex items-center gap-3.5 bg-navy-800/60 border border-slate-700/70 rounded-xl p-4 backdrop-blur-sm">
-                    <div class="w-10 h-10 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-8 border-t border-gold-400/20">
+                <div class="flex items-center gap-3.5 bg-navy-900/75 border border-slate-800 hover:border-gold-400/40 rounded-xl p-4 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-emeraldteal-500/15 text-emeraldteal-300 flex items-center justify-center shrink-0">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
@@ -203,8 +296,8 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3.5 bg-navy-800/60 border border-slate-700/70 rounded-xl p-4 backdrop-blur-sm">
-                    <div class="w-10 h-10 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                <div class="flex items-center gap-3.5 bg-navy-900/75 border border-slate-800 hover:border-gold-400/40 rounded-xl p-4 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-gold-400/15 text-gold-300 flex items-center justify-center shrink-0">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
                         </svg>
@@ -215,8 +308,8 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3.5 bg-navy-800/60 border border-slate-700/70 rounded-xl p-4 backdrop-blur-sm">
-                    <div class="w-10 h-10 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                <div class="flex items-center gap-3.5 bg-navy-900/75 border border-slate-800 hover:border-gold-400/40 rounded-xl p-4 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-emeraldteal-500/15 text-emeraldteal-300 flex items-center justify-center shrink-0">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
@@ -227,8 +320,8 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3.5 bg-navy-800/60 border border-slate-700/70 rounded-xl p-4 backdrop-blur-sm">
-                    <div class="w-10 h-10 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                <div class="flex items-center gap-3.5 bg-navy-900/75 border border-slate-800 hover:border-gold-400/40 rounded-xl p-4 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-gold-400/15 text-gold-300 flex items-center justify-center shrink-0">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                         </svg>
@@ -243,13 +336,196 @@
     </section>
 
     <!-- =====================================================================
-         3. CORE SERVICES (4-PILLAR PIPELINE)
+         3. NEW: PARTNER FINANCIAL & COMMERCIAL ADVANTAGE (PHARMA & CRO ROI)
+    ====================================================================== -->
+    <section id="commercial-value" class="py-20 lg:py-28 bg-gradient-to-b from-slate-50 via-gold-50/40 to-white border-b border-slate-200 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-100 border border-gold-300/60 text-gold-600 text-xs font-bold uppercase tracking-[0.18em]">
+                    Commercial &amp; Financial Advantage
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-navy-950 tracking-tight mt-4 mb-5 leading-tight">
+                    What Global Pharma Sponsors &amp; CROs Stand to Gain Financially
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                    Clinical excellence must also protect your balance sheet. Partnering with AchivHealth Clinicals lowers your West African operating cost base, shields commercial revenue from compliance friction, and accelerates evidence-driven market growth.
+                </p>
+            </div>
+
+            <!-- 5 Financial Gain Pillars (Bento Layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mb-12">
+
+                <!-- Gain 01: Spans 3 cols on desktop -->
+                <article class="lg:col-span-3 reveal rounded-2xl bg-navy-950 text-white p-8 border-luxe shadow-xl shadow-navy-950/15 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gold-400/15 blur-2xl pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="px-3 py-1 rounded-full bg-gold-400/15 border border-gold-400/35 text-gold-300 text-xs font-bold uppercase tracking-wider">
+                                Capital Efficiency
+                            </span>
+                            <span class="font-display text-sm font-extrabold text-gold-400">01</span>
+                        </div>
+                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white mb-3">
+                            Eliminate Local Subsidiary &amp; Expatriate Overhead
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
+                            Deploy an audit-ready Nigerian clinical operations, SDV, and pharmacovigilance footprint immediately—without the heavy fixed capital expenditure of incorporating a local entity, leasing facilities, hiring full-time regional headcount, or funding recurring international monitor travel.
+                        </p>
+                        <div class="pt-4 border-t border-slate-800 flex items-center gap-2 text-xs font-semibold text-emeraldteal-300">
+                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Convert heavy fixed regional infrastructure into lean, on-demand clinical capacity</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Gain 02: Spans 3 cols on desktop -->
+                <article class="lg:col-span-3 reveal rounded-2xl bg-navy-950 text-white p-8 border border-emeraldteal-500/35 shadow-xl shadow-navy-950/15 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-emeraldteal-500/15 blur-2xl pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <span class="px-3 py-1 rounded-full bg-emeraldteal-500/20 border border-emeraldteal-400/35 text-emeraldteal-300 text-xs font-bold uppercase tracking-wider">
+                                Revenue Protection
+                            </span>
+                            <span class="font-display text-sm font-extrabold text-emeraldteal-400">02</span>
+                        </div>
+                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white mb-3">
+                            Insulate Product Revenue from Regulatory Holds &amp; Penalties
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
+                            Delayed safety submissions, unclean trial datasets, and local compliance missteps cost sponsors months of lost commercial sales. Our NAFDAC-aligned ADR reporting, verified SDV workflows, and ICH-GCP v6 documentation safeguard your licenses, audit standing, and brand reputation.
+                        </p>
+                        <div class="pt-4 border-t border-slate-800 flex items-center gap-2 text-xs font-semibold text-gold-300">
+                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Proactive risk mitigation that prevents costly remediation, fines, and approval stalls</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Gain 03: Spans 2 cols -->
+                <article class="lg:col-span-2 reveal rounded-2xl bg-white p-7 border border-slate-200 hover:border-gold-400/60 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 text-gold-600 flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-gold-600 mb-1.5">Commercial Share Defense</p>
+                        <h3 class="font-display text-lg font-bold text-navy-950 mb-3">
+                            Protect &amp; Grow Sales Across 220M+ Patients
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Real-time end-user RWE uncovers silent adherence drop-offs, tolerability complaints, and polypharmacy conflicts early—enabling Medical Affairs and commercial teams to refine positioning before competitors capture prescriber share.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Gain 04: Spans 2 cols -->
+                <article class="lg:col-span-2 reveal rounded-2xl bg-white p-7 border border-slate-200 hover:border-emeraldteal-500/60 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emeraldteal-50 border border-emeraldteal-200 text-emeraldteal-600 flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-emeraldteal-600 mb-1.5">Accelerated Time-to-Insight</p>
+                        <h3 class="font-display text-lg font-bold text-navy-950 mb-3">
+                            Compress Data &amp; Dossier Turnaround Cycles
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Direct PharmD-led local execution eliminates sluggish multi-tier subcontracting chains. Faster dataset reconciliation, safety analysis, and CSR or manuscript drafting shorten time-to-decision and accelerate commercial milestones.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Gain 05: Spans 2 cols -->
+                <article class="lg:col-span-2 reveal rounded-2xl bg-white p-7 border border-slate-200 hover:border-gold-400/60 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 text-gold-600 flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <p class="text-[11px] font-bold uppercase tracking-widest text-gold-600 mb-1.5">Zero-Waste Budget Architecture</p>
+                        <h3 class="font-display text-lg font-bold text-navy-950 mb-3">
+                            Flexible, Deliverable-Driven Commercial Model
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Avoid bloated multinational agency retainers and idle overhead. Engage AchivHealth Clinicals on scoped, milestone-aligned workstreams where every dollar funds verified data integrity, safety compliance, and publication-grade outputs.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Executive Comparison Strip: Traditional Model vs AchivHealth Clinicals -->
+            <div class="reveal rounded-3xl bg-navy-950 text-white p-7 sm:p-10 border-luxe shadow-2xl overflow-hidden relative">
+                <div class="absolute inset-0 bg-clinical-grid opacity-35 pointer-events-none"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 mb-8 border-b border-slate-800">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-400">Executive Cost-Benefit Snapshot</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white mt-2">
+                                Why Sponsors Switch to a Dedicated Local Clinical Partner
+                            </h3>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 font-bold px-6 py-3.5 rounded-xl text-sm shadow-lg shadow-gold-500/20 transition-all shrink-0">
+                            <span>Request Tailored Commercial Scope</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Traditional Approach -->
+                        <div class="rounded-2xl bg-navy-900/70 border border-slate-800 p-6">
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Conventional Overseas Model</p>
+                            <ul class="space-y-3 text-sm text-slate-400">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="text-rose-400 font-bold mt-0.5">&times;</span>
+                                    <span>High fixed overhead from multinational layers, travel expenses, and local entity setup</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="text-rose-400 font-bold mt-0.5">&times;</span>
+                                    <span>Post-launch blind spots in Nigerian prescribing habits and patient tolerability</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="text-rose-400 font-bold mt-0.5">&times;</span>
+                                    <span>Fragmented handoffs between data teams, safety officers, and medical writers</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- AchivHealth Advantage -->
+                        <div class="rounded-2xl bg-gradient-to-br from-emeraldteal-700/25 via-navy-900 to-gold-500/10 border border-emeraldteal-400/40 p-6">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gold-300 mb-4">AchivHealth Clinicals Partnership</p>
+                            <ul class="space-y-3 text-sm text-slate-100">
+                                <li class="flex items-start gap-2.5">
+                                    <svg class="w-5 h-5 text-emeraldteal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Immediate in-country operational footprint with milestone-aligned budget discipline</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <svg class="w-5 h-5 text-emeraldteal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Real-time anonymized RWE &amp; ADR feeds protecting market share and NAFDAC compliance</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <svg class="w-5 h-5 text-emeraldteal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Unified PharmD-led accountability across RWE, SDV, pharmacovigilance, and medical writing</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         4. CORE SERVICES (4-PILLAR PIPELINE)
     ====================================================================== -->
     <section id="services" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Core B2B Capabilities</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-3 mb-4">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-emeraldteal-600">Core B2B Capabilities</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight mt-3 mb-4">
                     Four-Pillar Clinical Operations &amp; Intelligence Pipeline
                 </h2>
                 <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -260,22 +536,22 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Pillar 01: Highlighted Strategic Edge -->
-                <article class="relative rounded-2xl bg-navy-900 text-white p-8 sm:p-10 border border-teal-500/45 shadow-xl shadow-navy-900/15 flex flex-col justify-between overflow-hidden">
-                    <div class="absolute top-0 right-0 w-48 h-48 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+                <article class="reveal relative rounded-2xl bg-navy-950 text-white p-8 sm:p-10 border-luxe shadow-xl shadow-navy-950/15 flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 right-0 w-56 h-56 bg-emeraldteal-500/15 rounded-full blur-3xl pointer-events-none"></div>
                     <div class="relative z-10">
                         <div class="flex items-center justify-between gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-2xl bg-teal-500/15 border border-teal-400/30 text-teal-400 flex items-center justify-center">
+                            <div class="w-14 h-14 rounded-2xl bg-emeraldteal-500/15 border border-emeraldteal-400/35 text-emeraldteal-300 flex items-center justify-center">
                                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                                 </svg>
                             </div>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-xs font-bold uppercase tracking-wider">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-300 text-xs font-bold uppercase tracking-wider">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
                                 Strategic Edge
                             </span>
                         </div>
 
-                        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Pillar 01</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-2">Pillar 01</p>
                         <h3 class="font-display text-2xl font-bold text-white mb-4">
                             Real-World Evidence (RWE) &amp; End-User Analytics
                         </h3>
@@ -283,122 +559,134 @@
                             Capturing real-time post-marketing product performance, patient-reported outcomes, adherence patterns, and tolerability insights directly from end users in Nigeria through structured, privacy-first workflows, giving global sponsors clear visibility into real-world therapeutic performance.
                         </p>
 
-                        <ul class="space-y-3 text-sm text-slate-200">
+                        <ul class="space-y-3 text-sm text-slate-200 mb-7">
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Real-time Phase IV post-marketing surveillance and product performance tracking</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Anonymized Patient-Reported Outcomes (PROs) and tolerability profiling</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Adherence gap diagnostics and local polypharmacy utilization patterns</span>
                             </li>
                         </ul>
                     </div>
+                    <div class="relative z-10 pt-4 border-t border-slate-800 text-xs font-semibold text-gold-300">
+                        Commercial Gain: Identifies patient drop-off drivers early to defend repeat prescribing and brand equity.
+                    </div>
                 </article>
 
                 <!-- Pillar 02 -->
-                <article class="rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 hover:border-teal-500/50 hover:shadow-lg hover:shadow-slate-200/70 transition-all flex flex-col justify-between">
+                <article class="reveal rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 hover:border-gold-400/60 hover:shadow-xl hover:shadow-slate-200/60 transition-all flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-teal-600 flex items-center justify-center shadow-sm mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-emeraldteal-600 flex items-center justify-center shadow-sm mb-6">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
                             </svg>
                         </div>
 
-                        <p class="text-xs font-bold uppercase tracking-widest text-teal-600 mb-2">Pillar 02</p>
-                        <h3 class="font-display text-2xl font-bold text-navy-900 mb-4">
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold-600 mb-2">Pillar 02</p>
+                        <h3 class="font-display text-2xl font-bold text-navy-950 mb-4">
                             Clinical Data Management &amp; Analytics
                         </h3>
                         <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
                             Handling complex raw clinical datasets, executing Source Document Verification (SDV), performing data cleaning and reconciliation, and transforming unstructured records into refined, actionable executive intelligence.
                         </p>
 
-                        <ul class="space-y-3 text-sm text-slate-700">
+                        <ul class="space-y-3 text-sm text-slate-700 mb-7">
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Source Document Verification (SDV) and clinical query resolution</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Raw dataset cleaning, validation, and historical registry reconciliation</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Decision-ready executive summaries and clinical performance analytics</span>
                             </li>
                         </ul>
                     </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-navy-800">
+                        Commercial Gain: Eliminates expensive database lock delays and audit rework for CRO study teams.
+                    </div>
                 </article>
 
                 <!-- Pillar 03 -->
-                <article class="rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 hover:border-teal-500/50 hover:shadow-lg hover:shadow-slate-200/70 transition-all flex flex-col justify-between">
+                <article class="reveal rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 hover:border-gold-400/60 hover:shadow-xl hover:shadow-slate-200/60 transition-all flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-teal-600 flex items-center justify-center shadow-sm mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-emeraldteal-600 flex items-center justify-center shadow-sm mb-6">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                             </svg>
                         </div>
 
-                        <p class="text-xs font-bold uppercase tracking-widest text-teal-600 mb-2">Pillar 03</p>
-                        <h3 class="font-display text-2xl font-bold text-navy-900 mb-4">
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold-600 mb-2">Pillar 03</p>
+                        <h3 class="font-display text-2xl font-bold text-navy-950 mb-4">
                             Pharmacovigilance &amp; ADR Reporting
                         </h3>
                         <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
                             Serving as your localized Nigerian drug safety outlet with end-to-end Adverse Drug Reaction (ADR) intake, clinical causality assessment, Individual Case Safety Report (ICSR) preparation, and NAFDAC regulatory compliance.
                         </p>
 
-                        <ul class="space-y-3 text-sm text-slate-700">
+                        <ul class="space-y-3 text-sm text-slate-700 mb-7">
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Localized ADR intake, triage, and structured clinical follow-up</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Causality assessment, signal detection, and drug-drug interaction review</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>ICSR compilation aligned with NAFDAC, WHO-UMC, and ICH-GCP timelines</span>
                             </li>
                         </ul>
                     </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-navy-800">
+                        Commercial Gain: Protects market authorization continuity and prevents regulatory non-compliance penalties.
+                    </div>
                 </article>
 
                 <!-- Pillar 04 -->
-                <article class="rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 hover:border-teal-500/50 hover:shadow-lg hover:shadow-slate-200/70 transition-all flex flex-col justify-between">
+                <article class="reveal rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 hover:border-gold-400/60 hover:shadow-xl hover:shadow-slate-200/60 transition-all flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-teal-600 flex items-center justify-center shadow-sm mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-emeraldteal-600 flex items-center justify-center shadow-sm mb-6">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                             </svg>
                         </div>
 
-                        <p class="text-xs font-bold uppercase tracking-widest text-teal-600 mb-2">Pillar 04</p>
-                        <h3 class="font-display text-2xl font-bold text-navy-900 mb-4">
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold-600 mb-2">Pillar 04</p>
+                        <h3 class="font-display text-2xl font-bold text-navy-950 mb-4">
                             Regulatory &amp; Medical Writing
                         </h3>
                         <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
                             Authoring publication-grade manuscripts, Clinical Study Reports (CSRs), trial protocols, Standard Operating Procedures (SOPs), and executive medical dossiers written strictly to international regulatory standards.
                         </p>
 
-                        <ul class="space-y-3 text-sm text-slate-700">
+                        <ul class="space-y-3 text-sm text-slate-700 mb-7">
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Peer-reviewed scientific manuscripts and Clinical Study Reports (CSRs)</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Clinical trial protocols, SOPs, and regulatory submission dossiers</span>
                             </li>
                             <li class="flex items-start gap-2.5">
-                                <svg class="w-5 h-5 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-emeraldteal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Executive pharmacotherapy briefs and evidence synthesis reports</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-navy-800">
+                        Commercial Gain: Accelerates submission readiness and strengthens scientific credibility with payers and regulators.
                     </div>
                 </article>
 
@@ -407,58 +695,58 @@
     </section>
 
     <!-- =====================================================================
-         4. THE NIGERIAN STRATEGIC ADVANTAGE
+         5. THE NIGERIAN STRATEGIC ADVANTAGE
     ====================================================================== -->
     <section id="nigeria-advantage" class="py-20 lg:py-28 bg-slate-50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
                 <!-- Left Column: Strategic Rationale -->
-                <div class="lg:col-span-6">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">The Nigerian Strategic Advantage</span>
-                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-3 mb-6">
+                <div class="lg:col-span-6 reveal">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-600">The Nigerian Strategic Advantage</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight mt-3 mb-6">
                         Real-Time Post-Launch Visibility in West Africa's Largest Economy
                     </h2>
                     <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-5">
-                        Nigeria is <strong class="text-navy-900">West Africa's largest economy and most populous nation</strong>. For global pharmaceutical companies and CROs, commercial success and patient safety depend on understanding how therapies perform after launch in real clinical environments, not only in pre-approval trials.
+                        Nigeria is <strong class="text-navy-950">West Africa's largest economy and most populous nation</strong>. For global pharmaceutical companies and CROs, commercial success and patient safety depend on understanding how therapies perform after launch in real clinical environments, not only in pre-approval trials.
                     </p>
                     <p class="text-slate-600 text-base leading-relaxed mb-8">
                         Positioning an in-house clinical partner on the ground in Nigeria eliminates post-marketing blind spots. We capture structured end-user feedback in real time, identify adherence gaps and unreported tolerability signals, and highlight clear product improvement opportunities for Medical Affairs and commercial teams.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                            <p class="font-display text-2xl font-extrabold text-teal-600">220M+</p>
-                            <p class="text-xs font-semibold text-navy-900 uppercase tracking-wider mt-1">High-Volume Patient Market</p>
-                            <p class="text-xs text-slate-500 mt-1">Broad real-world exposure across endemic diseases and chronic therapies.</p>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 border-t-4 border-t-gold-400 shadow-sm">
+                            <p class="font-display text-2xl font-extrabold text-navy-950">220M+</p>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-wider mt-1">High-Volume Patient Market</p>
+                            <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Broad real-world exposure across endemic diseases and chronic therapies.</p>
                         </div>
-                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                            <p class="font-display text-2xl font-extrabold text-navy-900">In-House Access</p>
-                            <p class="text-xs font-semibold text-navy-900 uppercase tracking-wider mt-1">Direct Local Oversight</p>
-                            <p class="text-xs text-slate-500 mt-1">PharmD-led execution aligned with PCN, NAFDAC, and ICH-GCP governance.</p>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 border-t-4 border-t-emeraldteal-500 shadow-sm">
+                            <p class="font-display text-2xl font-extrabold text-navy-950">In-House Access</p>
+                            <p class="text-xs font-bold text-emeraldteal-600 uppercase tracking-wider mt-1">Direct Local Oversight</p>
+                            <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">PharmD-led execution aligned with PCN, NAFDAC, and ICH-GCP governance.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column: 3-Step Compliant RWE Workflow -->
-                <div class="lg:col-span-6">
-                    <div class="bg-navy-900 rounded-3xl p-7 sm:p-10 text-white shadow-2xl border border-slate-800 relative overflow-hidden">
+                <div class="lg:col-span-6 reveal">
+                    <div class="bg-navy-950 rounded-3xl p-7 sm:p-10 text-white shadow-2xl border-luxe relative overflow-hidden">
                         <div class="absolute inset-0 bg-clinical-grid opacity-45 pointer-events-none"></div>
                         <div class="relative z-10">
                             <div class="flex items-center justify-between gap-4 mb-8">
                                 <div>
-                                    <span class="text-xs font-bold uppercase tracking-widest text-teal-400">Compliant Operating Model</span>
+                                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Compliant Operating Model</span>
                                     <h3 class="font-display text-xl sm:text-2xl font-bold text-white mt-1">3-Step RWE &amp; Safety Workflow</h3>
                                 </div>
-                                <span class="hidden sm:inline-flex items-center px-3 py-1 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-xs font-semibold">
+                                <span class="hidden sm:inline-flex items-center px-3 py-1 rounded-full bg-emeraldteal-500/15 border border-emeraldteal-400/35 text-emeraldteal-300 text-xs font-semibold">
                                     Privacy-First
                                 </span>
                             </div>
 
                             <div class="space-y-5">
                                 <!-- Step 1 -->
-                                <div class="flex items-start gap-4 bg-navy-800/85 border border-slate-700/80 rounded-2xl p-5">
-                                    <div class="w-10 h-10 rounded-xl bg-teal-600 text-white font-display font-bold flex items-center justify-center shrink-0 shadow-md shadow-teal-600/30">
+                                <div class="flex items-start gap-4 bg-navy-900/90 border border-slate-800 rounded-2xl p-5">
+                                    <div class="w-10 h-10 rounded-xl bg-emeraldteal-600 text-white font-display font-bold flex items-center justify-center shrink-0 shadow-md shadow-emeraldteal-600/30">
                                         01
                                     </div>
                                     <div>
@@ -470,14 +758,14 @@
                                 </div>
 
                                 <div class="flex justify-center -my-2">
-                                    <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                                     </svg>
                                 </div>
 
                                 <!-- Step 2 -->
-                                <div class="flex items-start gap-4 bg-navy-800/85 border border-slate-700/80 rounded-2xl p-5">
-                                    <div class="w-10 h-10 rounded-xl bg-teal-600 text-white font-display font-bold flex items-center justify-center shrink-0 shadow-md shadow-teal-600/30">
+                                <div class="flex items-start gap-4 bg-navy-900/90 border border-slate-800 rounded-2xl p-5">
+                                    <div class="w-10 h-10 rounded-xl bg-emeraldteal-600 text-white font-display font-bold flex items-center justify-center shrink-0 shadow-md shadow-emeraldteal-600/30">
                                         02
                                     </div>
                                     <div>
@@ -489,19 +777,19 @@
                                 </div>
 
                                 <div class="flex justify-center -my-2">
-                                    <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                                     </svg>
                                 </div>
 
                                 <!-- Step 3 -->
-                                <div class="flex items-start gap-4 bg-teal-600/15 border border-teal-500/40 rounded-2xl p-5">
-                                    <div class="w-10 h-10 rounded-xl bg-teal-400 text-navy-950 font-display font-extrabold flex items-center justify-center shrink-0">
+                                <div class="flex items-start gap-4 bg-gradient-to-r from-emeraldteal-600/20 to-gold-500/15 border border-gold-400/40 rounded-2xl p-5">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-300 to-gold-500 text-navy-950 font-display font-extrabold flex items-center justify-center shrink-0">
                                         03
                                     </div>
                                     <div>
-                                        <h4 class="font-display font-bold text-base text-white">Step 3: Actionable Product and Safety Intelligence</h4>
-                                        <p class="text-sm text-teal-100 mt-1 leading-relaxed">
+                                        <h4 class="font-display font-bold text-base text-white">Step 3: Actionable Product &amp; Safety Intelligence</h4>
+                                        <p class="text-sm text-gold-100 mt-1 leading-relaxed">
                                             Deliver clear executive dashboards, NAFDAC and ICH-GCP compliant safety reports, and targeted recommendations to strengthen product performance.
                                         </p>
                                     </div>
@@ -516,24 +804,24 @@
     </section>
 
     <!-- =====================================================================
-         5. RESEARCH & CLINICAL TRACK RECORD
+         6. RESEARCH & CLINICAL TRACK RECORD
     ====================================================================== -->
     <section id="research" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
                 <div class="max-w-2xl">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Research &amp; Clinical Track Record</span>
-                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-3">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-emeraldteal-600">Research &amp; Clinical Track Record</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight mt-3">
                         Experimental Pharmacology &amp; Clinical Reference Archives
                     </h2>
                 </div>
 
                 <!-- Prominent ORCID Link Badge -->
-                <a href="https://orcid.org/0009-0007-1980-0760" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 hover:bg-teal-50 border border-slate-200 hover:border-teal-400 transition-colors self-start md:self-auto shadow-sm">
+                <a href="https://orcid.org/0009-0007-1980-0760" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 hover:bg-gold-50 border border-slate-200 hover:border-gold-400 transition-colors self-start md:self-auto shadow-sm">
                     <span class="w-8 h-8 rounded-full bg-[#A6CE39] text-white font-display font-extrabold text-xs flex items-center justify-center shrink-0">iD</span>
                     <div class="text-left">
                         <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 leading-none">Verified ORCID Profile</p>
-                        <p class="text-sm font-bold text-navy-900 mt-1">0009-0007-1980-0760</p>
+                        <p class="text-sm font-bold text-navy-950 mt-1">0009-0007-1980-0760</p>
                     </div>
                     <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -542,81 +830,84 @@
             </div>
 
             <!-- Flagship Preclinical Manuscript Card -->
-            <div class="rounded-3xl bg-gradient-to-br from-navy-900 via-navy-900 to-navy-800 text-white p-8 sm:p-10 mb-8 border border-slate-800 shadow-xl">
-                <div class="flex flex-wrap items-center gap-3 mb-5">
-                    <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-xs font-bold uppercase tracking-wider">
-                        Flagship Pharmacodynamics &amp; Safety Research
-                    </span>
-                    <span class="px-3 py-1 rounded-full bg-white/10 text-slate-200 text-xs font-semibold">
-                        Submitted to <em>Malaria Journal</em> (Springer Nature)
-                    </span>
-                </div>
+            <div class="reveal rounded-3xl bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white p-8 sm:p-10 mb-10 border-luxe shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-wrap items-center gap-3 mb-5">
+                        <span class="px-3.5 py-1 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-300 text-xs font-bold uppercase tracking-wider">
+                            Flagship Pharmacodynamics &amp; Safety Research
+                        </span>
+                        <span class="px-3.5 py-1 rounded-full bg-emeraldteal-500/15 border border-emeraldteal-400/35 text-emeraldteal-200 text-xs font-semibold">
+                            Submitted to <em>Malaria Journal</em> (Springer Nature)
+                        </span>
+                    </div>
 
-                <h3 class="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-snug mb-4">
-                    In Vivo Modulation of Hepatic Cytochrome P450 Enzymes by Five Artemisinin-Based Combination Therapies in Wistar Rats
-                </h3>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl mb-6">
-                    An experimental <em>in vivo</em> investigation systematically evaluating five widely deployed Artemisinin-Based Combination Therapies (ACTs): Dihydroartemisinin-Piperaquine (DHA-PQP), Artemisinin-Piperaquine (ART-PQP), Artesunate-Sulfadoxine/Pyrimethamine (AS+SP), Artemether-Lumefantrine (AL), and Artesunate-Amodiaquine (AA). Utilizing Modified Lowry microsomal protein normalization and Omura-Sato CO-difference spectroscopy, the study classifies net hepatic CYP450 inhibition and neutrality to guide safer polypharmacy in malaria-endemic populations.
-                </p>
+                    <h3 class="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-snug mb-4">
+                        In Vivo Modulation of Hepatic Cytochrome P450 Enzymes by Five Artemisinin-Based Combination Therapies in Wistar Rats
+                    </h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl mb-6">
+                        An experimental <em>in vivo</em> investigation systematically evaluating five widely deployed Artemisinin-Based Combination Therapies (ACTs): Dihydroartemisinin-Piperaquine (DHA-PQP), Artemisinin-Piperaquine (ART-PQP), Artesunate-Sulfadoxine/Pyrimethamine (AS+SP), Artemether-Lumefantrine (AL), and Artesunate-Amodiaquine (AA). Utilizing Modified Lowry microsomal protein normalization and Omura-Sato CO-difference spectroscopy, the study classifies net hepatic CYP450 inhibition and neutrality to guide safer polypharmacy in malaria-endemic populations.
+                    </p>
 
-                <div class="flex flex-wrap gap-2.5 text-xs font-semibold text-teal-300">
-                    <span class="px-3 py-1.5 rounded-lg bg-navy-950/60 border border-slate-700">DHA-PQP &amp; ART-PQP</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-navy-950/60 border border-slate-700">AS+SP, AL, &amp; AA</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-navy-950/60 border border-slate-700">Hepatic CYP450 Modulation</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-navy-950/60 border border-slate-700">Drug-Drug Interaction Safety</span>
+                    <div class="flex flex-wrap gap-2.5 text-xs font-semibold text-gold-200">
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-950/75 border border-gold-400/25">DHA-PQP &amp; ART-PQP</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-950/75 border border-gold-400/25">AS+SP, AL, &amp; AA</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-950/75 border border-emeraldteal-400/25 text-emeraldteal-300">Hepatic CYP450 Modulation</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-navy-950/75 border border-emeraldteal-400/25 text-emeraldteal-300">Drug-Drug Interaction Safety</span>
+                    </div>
                 </div>
             </div>
 
             <!-- AchivHealth Clinical Reference Archives -->
-            <div class="mb-6">
-                <h3 class="font-display text-xl font-bold text-navy-900">AchivHealth Clinical Reference Archives</h3>
+            <div class="mb-6 reveal">
+                <h3 class="font-display text-xl font-bold text-navy-950">AchivHealth Clinical Reference Archives</h3>
                 <p class="text-sm text-slate-600 mt-1">Applied regulatory monographs, clinical logistics frameworks, and digital care protocols developed in-house.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-teal-500/45 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                <div class="reveal rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gold-400/60 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emeraldteal-50 text-emeraldteal-600 flex items-center justify-center mb-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                         </svg>
                     </div>
-                    <h4 class="font-display text-base font-bold text-navy-900 mb-2">WHO AWaRe Antimicrobial Stewardship</h4>
+                    <h4 class="font-display text-base font-bold text-navy-950 mb-2">WHO AWaRe Antimicrobial Stewardship</h4>
                     <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Evidence-based prescribing guidance and resistance surveillance frameworks structured around WHO Access, Watch, and Reserve classifications.
                     </p>
                 </div>
 
-                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-teal-500/45 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                <div class="reveal rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gold-400/60 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center mb-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                     </div>
-                    <h4 class="font-display text-base font-bold text-navy-900 mb-2">Nigerian Controlled Drug Regulatory Frameworks</h4>
+                    <h4 class="font-display text-base font-bold text-navy-950 mb-2">Nigerian Controlled Drug Regulatory Frameworks</h4>
                     <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Compliance documentation covering controlled substance dispensing, audit trails, and NAFDAC and PCN regulatory reporting obligations.
                     </p>
                 </div>
 
-                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-teal-500/45 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                <div class="reveal rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gold-400/60 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emeraldteal-50 text-emeraldteal-600 flex items-center justify-center mb-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
                         </svg>
                     </div>
-                    <h4 class="font-display text-base font-bold text-navy-900 mb-2">Adult Vaccination Logistics</h4>
+                    <h4 class="font-display text-base font-bold text-navy-950 mb-2">Adult Vaccination Logistics</h4>
                     <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Cold-chain tracking, multi-dose schedule reconciliation, and immunization registry auditing for preventive adult health programs.
                     </p>
                 </div>
 
-                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-teal-500/45 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4">
+                <div class="reveal rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gold-400/60 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center mb-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h4 class="font-display text-base font-bold text-navy-900 mb-2">Telepharmacy Workflows</h4>
+                    <h4 class="font-display text-base font-bold text-navy-950 mb-2">Telepharmacy Workflows</h4>
                     <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Digital consultation architecture, remote medication adherence follow-up, and structured patient-reported outcome capture.
                     </p>
@@ -626,13 +917,13 @@
     </section>
 
     <!-- =====================================================================
-         6. INSTITUTIONAL CREDENTIALS & GOVERNANCE
+         7. INSTITUTIONAL CREDENTIALS & GOVERNANCE
     ====================================================================== -->
     <section id="credentials" class="py-20 lg:py-28 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-14">
-                <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Institutional Credentials &amp; Governance</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-3 mb-4">
+            <div class="max-w-3xl mb-14 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-600">Institutional Credentials &amp; Governance</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight mt-3 mb-4">
                     Verified Academic, Regulatory, and Clinical Safety Standards
                 </h2>
                 <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -643,57 +934,57 @@
             <!-- 4 Institutional Credential Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
+                <div class="reveal bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-gold-400/60 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-950 text-gold-300 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-navy-900 text-lg leading-snug">Doctor of Pharmacy (PharmD)</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider text-teal-600 mt-2">University of Benin (UNIBEN)</p>
+                    <h3 class="font-display font-bold text-navy-950 text-lg leading-snug">Doctor of Pharmacy (PharmD)</h3>
+                    <p class="text-xs font-bold uppercase tracking-wider text-emeraldteal-600 mt-2">University of Benin (UNIBEN)</p>
                     <p class="text-sm text-slate-600 mt-3 leading-relaxed">
                         Advanced clinical pharmacy, experimental pharmacology, pharmacokinetics, and toxicology training from the Faculty of Pharmacy.
                     </p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
+                <div class="reveal bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-gold-400/60 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-950 text-emeraldteal-300 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-navy-900 text-lg leading-snug">Registered Pharmacist</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider text-teal-600 mt-2">Pharmacists Council of Nigeria (PCN)</p>
+                    <h3 class="font-display font-bold text-navy-950 text-lg leading-snug">Registered Pharmacist</h3>
+                    <p class="text-xs font-bold uppercase tracking-wider text-gold-600 mt-2">Pharmacists Council of Nigeria (PCN)</p>
                     <p class="text-sm text-slate-600 mt-3 leading-relaxed">
                         Full national licensure authorizing ethical pharmaceutical governance, patient safety oversight, and local regulatory coordination.
                     </p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
+                <div class="reveal bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-gold-400/60 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-950 text-gold-300 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-navy-900 text-lg leading-snug">ICH-GCP (Version 6) Certified</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider text-teal-600 mt-2">NIDA Clinical Trials Network</p>
+                    <h3 class="font-display font-bold text-navy-950 text-lg leading-snug">ICH-GCP (Version 6) Certified</h3>
+                    <p class="text-xs font-bold uppercase tracking-wider text-emeraldteal-600 mt-2">NIDA Clinical Trials Network</p>
                     <p class="text-sm text-slate-600 mt-3 leading-relaxed">
                         Active international certification in Good Clinical Practice, human subject protection, informed consent, and clinical data integrity.
                     </p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
+                <div class="reveal bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-gold-400/60 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-950 text-emeraldteal-300 flex items-center justify-center mb-5">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-navy-900 text-lg leading-snug">Pharmacovigilance Trained</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider text-teal-600 mt-2">The Global Health Network (TGHN)</p>
+                    <h3 class="font-display font-bold text-navy-950 text-lg leading-snug">Pharmacovigilance Trained</h3>
+                    <p class="text-xs font-bold uppercase tracking-wider text-gold-600 mt-2">The Global Health Network (TGHN)</p>
                     <p class="text-sm text-slate-600 mt-3 leading-relaxed">
                         Formal global health training in adverse event classification, causality evaluation, and expedited safety reporting standards.
                     </p>
@@ -703,62 +994,63 @@
     </section>
 
     <!-- =====================================================================
-         7. DIRECT PARTNERSHIP & CONTACT SECTION
+         8. DIRECT PARTNERSHIP & CONTACT SECTION
     ====================================================================== -->
-    <section id="contact" class="py-20 lg:py-28 bg-navy-900 text-white relative overflow-hidden">
+    <section id="contact" class="py-20 lg:py-28 bg-navy-950 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-clinical-grid opacity-45 pointer-events-none"></div>
-        <div class="absolute bottom-0 right-0 w-[440px] h-[440px] rounded-full bg-teal-600/15 blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[460px] h-[460px] rounded-full bg-emeraldteal-600/15 blur-[130px] pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-[360px] h-[360px] rounded-full bg-gold-400/10 blur-[120px] pointer-events-none"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
                 <!-- Left Side: Direct Contact Cards -->
-                <div class="lg:col-span-5">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-400">Direct Partnership Desk</span>
+                <div class="lg:col-span-5 reveal">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-400">Direct Partnership Desk</span>
                     <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3 mb-5">
                         Partner With AchivHealth Clinicals
                     </h2>
                     <p class="text-slate-300 text-base leading-relaxed mb-9">
-                        Connect directly with our team to discuss remote Nigerian pharmacovigilance coverage, real-time end-user RWE programs, clinical data cleaning, or regulatory medical writing.
+                        Connect directly with our team to scope cost-efficient Nigerian pharmacovigilance coverage, real-time end-user RWE programs, clinical data cleaning, or regulatory medical writing.
                     </p>
 
                     <div class="space-y-4">
                         <!-- Email Card with One-Click Copy -->
-                        <div class="bg-navy-800/85 border border-slate-700/80 rounded-2xl p-5 flex items-center justify-between gap-4">
+                        <div class="bg-navy-900/90 border border-gold-400/25 rounded-2xl p-5 flex items-center justify-between gap-4">
                             <div class="flex items-center gap-4 min-w-0">
-                                <div class="w-11 h-11 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                                <div class="w-11 h-11 rounded-xl bg-gold-400/15 text-gold-300 flex items-center justify-center shrink-0">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                     </svg>
                                 </div>
                                 <div class="min-w-0">
                                     <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Executive Email</p>
-                                    <a href="mailto:director@achivhealthclinicals.com" class="text-sm sm:text-base font-bold text-white hover:text-teal-400 transition-colors truncate block">
+                                    <a href="mailto:director@achivhealthclinicals.com" class="text-sm sm:text-base font-bold text-white hover:text-gold-300 transition-colors truncate block">
                                         director@achivhealthclinicals.com
                                     </a>
                                 </div>
                             </div>
-                            <button id="copy-email-btn" type="button" class="px-3.5 py-2 rounded-lg bg-navy-900 hover:bg-teal-600 text-xs font-semibold text-slate-200 hover:text-white border border-slate-700 transition-colors shrink-0">
+                            <button id="copy-email-btn" type="button" class="px-3.5 py-2 rounded-lg bg-navy-950 hover:bg-gold-400 text-xs font-bold text-gold-200 hover:text-navy-950 border border-gold-400/35 transition-colors shrink-0">
                                 Copy
                             </button>
                         </div>
 
                         <!-- Direct WhatsApp & Phone Card -->
-                        <div class="bg-navy-800/85 border border-slate-700/80 rounded-2xl p-5">
+                        <div class="bg-navy-900/90 border border-emeraldteal-500/30 rounded-2xl p-5">
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="w-11 h-11 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                                <div class="w-11 h-11 rounded-xl bg-emeraldteal-500/15 text-emeraldteal-300 flex items-center justify-center shrink-0">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M12.031 2C6.504 2 2.01 6.494 2.01 12.021c0 1.766.462 3.491 1.341 5.012L2 22l5.106-1.339a9.975 9.975 0 004.925 1.298h.004c5.526 0 10.02-4.494 10.02-10.021C22.055 6.494 17.561 2 12.031 2zm5.839 14.23c-.246.693-1.434 1.325-1.981 1.406-.508.075-1.168.106-1.884-.122-.437-.139-.997-.324-1.718-.635-3.021-1.304-4.994-4.354-5.145-4.555-.151-.201-1.227-1.633-1.227-3.115s.776-2.211 1.051-2.512c.276-.301.602-.377.803-.377.201 0 .401.002.577.011.186.009.435-.071.681.521.246.594.841 2.055.916 2.206.075.151.125.327.025.528-.1.201-.151.327-.301.502-.151.176-.317.392-.452.527-.151.151-.308.314-.132.616.176.301.781 1.289 1.678 2.088 1.153 1.028 2.125 1.346 2.426 1.497.301.151.477.126.652-.075.176-.201.753-.879.954-1.181.201-.301.401-.251.677-.151.276.101 1.756.828 2.057.979.301.151.502.226.577.352.075.125.075.728-.171 1.421z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Direct WhatsApp &amp; Phone</p>
-                                    <a href="tel:+2348102580630" class="text-sm sm:text-base font-bold text-white hover:text-teal-400 transition-colors">
+                                    <a href="tel:+2348102580630" class="text-sm sm:text-base font-bold text-white hover:text-emeraldteal-300 transition-colors">
                                         +234 810 258 0630
                                     </a>
                                 </div>
                             </div>
-                            <a href="https://wa.me/2348102580630" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-500 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors">
+                            <a href="https://wa.me/2348102580630" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-emeraldteal-600 hover:bg-emeraldteal-500 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition-colors">
                                 <span>Message on WhatsApp</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -767,8 +1059,8 @@
                         </div>
 
                         <!-- Location Card -->
-                        <div class="bg-navy-800/85 border border-slate-700/80 rounded-2xl p-5 flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                        <div class="bg-navy-900/90 border border-slate-800 rounded-2xl p-5 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold-400/15 text-gold-300 flex items-center justify-center shrink-0">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -777,18 +1069,23 @@
                             <div>
                                 <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Operations Base</p>
                                 <p class="text-sm sm:text-base font-bold text-white">Benin City, Edo State, Nigeria</p>
-                                <p class="text-xs text-slate-400 mt-0.5">Serving Overseas CROs and Pharmaceutical Sponsors</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Serving Global CROs and Pharmaceutical Sponsors</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Side: Interactive Static-Host Friendly Partnership Inquiry Form -->
-                <div class="lg:col-span-7">
-                    <div class="bg-white text-slate-800 rounded-3xl p-7 sm:p-10 shadow-2xl">
-                        <h3 class="font-display text-2xl font-extrabold text-navy-900 mb-2">
-                            Partnership Inquiry Form
-                        </h3>
+                <div class="lg:col-span-7 reveal">
+                    <div class="bg-white text-slate-800 rounded-3xl p-7 sm:p-10 shadow-2xl border border-gold-200/60">
+                        <div class="flex items-center justify-between gap-4 mb-2">
+                            <h3 class="font-display text-2xl font-extrabold text-navy-950">
+                                Partnership Inquiry Form
+                            </h3>
+                            <span class="hidden sm:inline-flex px-3 py-1 rounded-full bg-gold-50 border border-gold-300 text-gold-600 text-xs font-bold">
+                                B2B Sponsor Desk
+                            </span>
+                        </div>
                         <p class="text-sm text-slate-500 mb-7">
                             Complete the project details below and dispatch your inquiry directly via Email or WhatsApp.
                         </p>
@@ -798,12 +1095,12 @@
                                 <div>
                                     <label for="org-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Organization Name *</label>
                                     <input type="text" id="org-name" name="orgName" required placeholder="e.g., Global Pharma CRO"
-                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-950 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emeraldteal-500 focus:bg-white transition-all">
                                 </div>
                                 <div>
                                     <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Contact Name *</label>
                                     <input type="text" id="contact-name" name="contactName" required placeholder="e.g., Dr. Sarah Jenkins"
-                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-950 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emeraldteal-500 focus:bg-white transition-all">
                                 </div>
                             </div>
 
@@ -811,12 +1108,12 @@
                                 <div>
                                     <label for="work-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Work Email *</label>
                                     <input type="email" id="work-email" name="workEmail" required placeholder="name@company.com"
-                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-950 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emeraldteal-500 focus:bg-white transition-all">
                                 </div>
                                 <div>
                                     <label for="service-pillar" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Service Pillar *</label>
                                     <select id="service-pillar" name="servicePillar" required
-                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-950 focus:outline-none focus:ring-2 focus:ring-emeraldteal-500 focus:bg-white transition-all">
                                         <option value="Real-World Evidence (RWE) & End-User Analytics">Real-World Evidence (RWE) &amp; End-User Analytics</option>
                                         <option value="Clinical Data Management & Analytics">Clinical Data Management &amp; Analytics</option>
                                         <option value="Pharmacovigilance & ADR Reporting">Pharmacovigilance &amp; ADR Reporting</option>
@@ -829,7 +1126,7 @@
                             <div>
                                 <label for="project-brief" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Project Brief *</label>
                                 <textarea id="project-brief" name="projectBrief" rows="4" required placeholder="Outline your therapeutic area, target product, data or pharmacovigilance scope, and timeline..."
-                                    class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all resize-y"></textarea>
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-sm text-navy-950 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emeraldteal-500 focus:bg-white transition-all resize-y"></textarea>
                             </div>
 
                             <!-- Inline Validation Message -->
@@ -838,18 +1135,18 @@
                             </div>
 
                             <!-- Inline Dispatch Confirmation Notice -->
-                            <div id="form-status" class="hidden rounded-xl bg-teal-50 border border-teal-200 px-4 py-3 text-sm text-teal-800 font-medium"></div>
+                            <div id="form-status" class="hidden rounded-xl bg-emeraldteal-50 border border-emeraldteal-200 px-4 py-3 text-sm text-emeraldteal-700 font-medium"></div>
 
                             <!-- Two Direct Dispatch Buttons -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-                                <button id="dispatch-email-btn" type="button" class="inline-flex items-center justify-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-bold px-6 py-4 rounded-xl shadow-md transition-all text-sm">
-                                    <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <button id="dispatch-email-btn" type="button" class="inline-flex items-center justify-center gap-2 bg-navy-950 hover:bg-navy-800 text-white font-bold px-6 py-4 rounded-xl shadow-md transition-all text-sm">
+                                    <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                     </svg>
                                     <span>Send via Email</span>
                                 </button>
 
-                                <button id="dispatch-whatsapp-btn" type="button" class="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-4 rounded-xl shadow-md shadow-teal-600/20 transition-all text-sm">
+                                <button id="dispatch-whatsapp-btn" type="button" class="inline-flex items-center justify-center gap-2 bg-emeraldteal-600 hover:bg-emeraldteal-700 text-white font-bold px-6 py-4 rounded-xl shadow-md shadow-emeraldteal-600/20 transition-all text-sm">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M12.031 2C6.504 2 2.01 6.494 2.01 12.021c0 1.766.462 3.491 1.341 5.012L2 22l5.106-1.339a9.975 9.975 0 004.925 1.298h.004c5.526 0 10.02-4.494 10.02-10.021C22.055 6.494 17.561 2 12.031 2zm5.839 14.23c-.246.693-1.434 1.325-1.981 1.406-.508.075-1.168.106-1.884-.122-.437-.139-.997-.324-1.718-.635-3.021-1.304-4.994-4.354-5.145-4.555-.151-.201-1.227-1.633-1.227-3.115s.776-2.211 1.051-2.512c.276-.301.602-.377.803-.377.201 0 .401.002.577.011.186.009.435-.071.681.521.246.594.841 2.055.916 2.206.075.151.125.327.025.528-.1.201-.151.327-.301.502-.151.176-.317.392-.452.527-.151.151-.308.314-.132.616.176.301.781 1.289 1.678 2.088 1.153 1.028 2.125 1.346 2.426 1.497.301.151.477.126.652-.075.176-.201.753-.879.954-1.181.201-.301.401-.251.677-.151.276.101 1.756.828 2.057.979.301.151.502.226.577.352.075.125.075.728-.171 1.421z"/>
                                     </svg>
@@ -865,31 +1162,36 @@
     </section>
 
     <!-- =====================================================================
-         8. CORPORATE FOOTER
+         9. CORPORATE FOOTER
     ====================================================================== -->
-    <footer class="bg-navy-950 text-slate-400 border-t border-slate-800/80 py-12">
+    <footer class="bg-[#040A14] text-slate-400 border-t border-gold-400/20 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-slate-800/80">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-navy-900 border border-slate-800 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-teal-400" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <circle cx="6" cy="14" r="2.2" fill="currentColor"/>
-                            <circle cx="22" cy="14" r="2.2" fill="currentColor"/>
-                            <path d="M8.2 14H10.6L12.3 9.5L15.7 18.5L17.4 14H19.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-12 rounded-xl bg-[#0A182B] border border-gold-400/35 overflow-hidden shrink-0">
+                        <img
+                            src="logo.jpg"
+                            alt="AchivHealth Clinicals Logo"
+                            class="w-full h-full object-cover object-center scale-[1.55]"
+                            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                        >
+                        <div class="hidden w-full h-full flex items-center justify-center font-display font-extrabold text-xs text-gold-300">
+                            AH
+                        </div>
                     </div>
                     <div>
                         <p class="font-display font-bold text-white text-base leading-none">AchivHealth Clinicals</p>
-                        <p class="text-xs text-slate-500 mt-1">Real-World Evidence, Pharmacovigilance, and Medical Writing in Nigeria</p>
+                        <p class="text-xs text-slate-400 mt-1.5">Real-World Evidence, Pharmacovigilance &amp; Medical Writing in Nigeria</p>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-6 text-sm font-medium">
-                    <a href="#services" class="hover:text-teal-400 transition-colors">Services</a>
-                    <a href="#nigeria-advantage" class="hover:text-teal-400 transition-colors">Nigeria Advantage</a>
-                    <a href="#research" class="hover:text-teal-400 transition-colors">Research</a>
-                    <a href="#credentials" class="hover:text-teal-400 transition-colors">Credentials</a>
-                    <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
+                    <a href="#commercial-value" class="text-gold-300 hover:text-gold-200 transition-colors">Partner ROI</a>
+                    <a href="#services" class="hover:text-emeraldteal-300 transition-colors">Services</a>
+                    <a href="#nigeria-advantage" class="hover:text-emeraldteal-300 transition-colors">Nigeria Advantage</a>
+                    <a href="#research" class="hover:text-emeraldteal-300 transition-colors">Research</a>
+                    <a href="#credentials" class="hover:text-emeraldteal-300 transition-colors">Credentials</a>
+                    <a href="#contact" class="hover:text-emeraldteal-300 transition-colors">Contact</a>
                 </div>
             </div>
 
@@ -901,7 +1203,7 @@
     </footer>
 
     <!-- =====================================================================
-         VANILLA JAVASCRIPT: NAVIGATION, CLIPBOARD COPY, & INQUIRY DISPATCH
+         VANILLA JAVASCRIPT: NAVIGATION, REVEAL, CLIPBOARD COPY & DISPATCH
     ====================================================================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -928,13 +1230,30 @@
                 link.addEventListener('click', () => setMobileMenuState(false));
             });
 
-            // 2. Subtle Sticky Header Elevation on Scroll
+            // 2. Sticky Header Shadow on Scroll
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
-                navbar.classList.toggle('shadow-md', window.scrollY > 12);
+                navbar.classList.toggle('shadow-xl', window.scrollY > 12);
             }, { passive: true });
 
-            // 3. One-Click Email Copy (iframe-safe execCommand approach)
+            // 3. Smooth Scroll Reveal for Sections & Cards
+            const revealElements = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+
+                revealElements.forEach((el) => observer.observe(el));
+            } else {
+                revealElements.forEach((el) => el.classList.add('is-visible'));
+            }
+
+            // 4. One-Click Email Copy (iframe-safe execCommand approach)
             const copyEmailBtn = document.getElementById('copy-email-btn');
             copyEmailBtn.addEventListener('click', () => {
                 const emailAddress = 'director@achivhealthclinicals.com';
@@ -949,10 +1268,10 @@
                 try {
                     document.execCommand('copy');
                     copyEmailBtn.textContent = 'Copied!';
-                    copyEmailBtn.classList.add('bg-teal-600', 'text-white', 'border-teal-500');
+                    copyEmailBtn.classList.add('bg-gold-400', 'text-navy-950');
                     setTimeout(() => {
                         copyEmailBtn.textContent = 'Copy';
-                        copyEmailBtn.classList.remove('bg-teal-600', 'text-white', 'border-teal-500');
+                        copyEmailBtn.classList.remove('bg-gold-400', 'text-navy-950');
                     }, 2200);
                 } catch (err) {
                     copyEmailBtn.textContent = emailAddress;
@@ -961,7 +1280,7 @@
                 }
             });
 
-            // 4. Interactive Partnership Inquiry Form Validation & Dual Dispatch
+            // 5. Interactive Partnership Inquiry Form Validation & Dual Dispatch
             const orgInput = document.getElementById('org-name');
             const nameInput = document.getElementById('contact-name');
             const emailInput = document.getElementById('work-email');
@@ -1032,5 +1351,3 @@
     </script>
 </body>
 </html>
-
-```
